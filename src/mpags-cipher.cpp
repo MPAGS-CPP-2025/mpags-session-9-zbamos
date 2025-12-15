@@ -86,7 +86,10 @@ int main(int argc, char* argv[])
 
     CaeserCipher cipher{settings.cipherKey};
 
-    if (!cipher.valid()) {return 1; };
+    if (!cipher.valid()) {
+        std::cout << "cipher key not valid" << std::endl;
+        return 1; 
+    };
 
     // Run the Caesar cipher (using the specified key and encrypt/decrypt flag) on the input text
     std::string outputText{
