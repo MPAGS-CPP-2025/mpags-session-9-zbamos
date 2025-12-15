@@ -87,7 +87,7 @@ int main(int argc, char* argv[])
 
     // Run the Caesar cipher (using the specified key and encrypt/decrypt flag) on the input text
     std::string outputText{
-        cipher.applyCipher(inputText, settings.encrypt)};
+        cipher.applyCipher(inputText, settings.cipherMode)};
 
     // Output the encrypted/decrypted text to stdout/file
     if (!settings.outputFile.empty()) {

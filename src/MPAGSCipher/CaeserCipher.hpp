@@ -1,6 +1,8 @@
 #ifndef MPAGSCIPHER_CEASERCIPHER_HPP
 #define MPAGSCIPHER_CEASERCIPHER_HPP
 
+#include "CipherMode.hpp"
+
 #include <string>
 #include <vector>
 
@@ -39,7 +41,7 @@ public:
      * 
      * \returns encrypted/decrypted string
      */
-    std::string applyCipher (const std::string& inputText, const bool encrypt) const;
+    std::string applyCipher (const std::string& inputText, const CipherMode encrypt) const;
 
 private:
     std::size_t key_{0};
