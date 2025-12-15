@@ -93,8 +93,8 @@ file supplied with the `-o` option.
 ## Source code layout
 ```
 .
-├── README.md                       Top-level README, describes layout of the repository
 ├── build
+├── README.md                       Top-level README, describes layout of the repository
 └── src
     ├── CMakeLists.txt              CMake build script
     ├── Documentation               Subdirectory for documentation of the MPAGCipher library
@@ -102,14 +102,17 @@ file supplied with the `-o` option.
     │   └── Doxyfile.in
     ├── LICENSE                     License file, in our case MIT
     ├── MPAGSCipher                 Subdirectory for MPAGSCipher library code
-    │   ├── ProcessCommandLine.cpp
-    │   ├── ProcessCommandLine.hpp
-    │   ├── RunCaesarCipher.cpp
-    │   ├── RunCaesarCipher.hpp
-    │   ├── TransformChar.cpp
-    │   └── TransformChar.hpp
-    ├── README.md                   This file, describes the project
-    └── mpags-cipher.cpp            Main program C++ source file
+    │   ├── CaeserCipher.cpp
+    │   ├── CaeserCipher.hpp
+    │   ├── CipherMode.hpp
+    │   ├── ProcessCommandLine.cpp
+    │   ├── ProcessCommandLine.hpp
+    │   ├── RunCaesarCipher.cpp
+    │   ├── RunCaesarCipher.hpp
+    │   ├── TransformChar.cpp
+    │   └── TransformChar.hpp
+    ├── mpags-cipher.cpp
+    └── README.md
 ```
 
 ## Copying
