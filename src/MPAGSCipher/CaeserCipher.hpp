@@ -16,15 +16,22 @@
  */
 class CaeserCipher {
 public:
+    /**
+     * \brief Create a new CaeserCipher with the given key
+     * 
+     * \param key the key to use in the cipher
+     */
     explicit CaeserCipher (const std::size_t& key);
+
+    /**
+     * \brief Create a new CaeserCipher, converting string to key
+     * 
+     * \param key the stirng to convery into the ciphers key
+     */
     explicit CaeserCipher (const std::string& key);
 
-    std::size_t key() const { return key_; };
-    bool valid() const { return valid_; };
+    std::size_t key_{0};
 
-private:
-    std::size_t key_{0}; ///< The cipher key
-    bool valid_{false};
 };
 
 #endif    // MPAGSCIPHERCEASERCIPHER_HPP

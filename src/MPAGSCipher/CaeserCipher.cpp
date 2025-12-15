@@ -4,12 +4,11 @@
 #include <iostream>
 #include <cctype>
 
-CaeserCipher::CaeserCipher(const std::size_t& key)
- : key_{key}
+CaeserCipher::CaeserCipher(const std::size_t& key) : key_{key}
 {    
 }
 
-CaeserCipher::CaeserCipher(const std::string& key)
+CaeserCipher::CaeserCipher(const std::string& key) : key_{0}
 {
 
     if (!key.empty()) {
@@ -25,7 +24,7 @@ CaeserCipher::CaeserCipher(const std::string& key)
         // final day of this course - they are a very complex area of C++ that
         // could take an entire course on their own!)
 
-        
+
 
         for (const auto& elem : key) {
             if (!std::isdigit(elem)) {
@@ -33,9 +32,9 @@ CaeserCipher::CaeserCipher(const std::string& key)
                     << "[error] cipher key must be an unsigned long integer for Caesar cipher,\n"
                     << "        the supplied key (" << key
                     << ") could not be successfully converted" << std::endl;
+                return;
             }
         }
         key_ = std::stoul(key);
-        valid_ = true;
     }
 }
