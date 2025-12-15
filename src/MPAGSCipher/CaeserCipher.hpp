@@ -14,11 +14,17 @@
  *
  * \param key ceaser cipher key
  */
-class CeaserCipher {
-    public:
-    CeaserCipher (std::string key);
+class CaeserCipher {
+public:
+    explicit CaeserCipher (const std::size_t& key);
+    explicit CaeserCipher (const std::string& key);
 
-    std::string key; ///< The cipher key
+    std::size_t key() const { return key_; };
+    bool valid() const { return valid_; };
+
+private:
+    std::size_t key_{0}; ///< The cipher key
+    bool valid_{false};
 };
 
 #endif    // MPAGSCIPHERCEASERCIPHER_HPP
