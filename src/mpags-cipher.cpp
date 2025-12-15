@@ -1,5 +1,4 @@
 #include "ProcessCommandLine.hpp"
-#include "RunCaesarCipher.hpp"
 #include "TransformChar.hpp"
 #include "CaeserCipher.hpp"
 
@@ -88,7 +87,7 @@ int main(int argc, char* argv[])
 
     // Run the Caesar cipher (using the specified key and encrypt/decrypt flag) on the input text
     std::string outputText{
-        runCaesarCipher(inputText, cipher.key_, settings.encrypt)};
+        cipher.applyCipher(inputText, settings.encrypt)};
 
     // Output the encrypted/decrypted text to stdout/file
     if (!settings.outputFile.empty()) {

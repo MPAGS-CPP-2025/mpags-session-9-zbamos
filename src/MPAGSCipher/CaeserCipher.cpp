@@ -1,4 +1,5 @@
 #include "CaeserCipher.hpp"
+#include "RunCaesarCipher.hpp"
 
 #include <string>
 #include <iostream>
@@ -37,4 +38,8 @@ CaeserCipher::CaeserCipher(const std::string& key) : key_{0}
         }
         key_ = std::stoul(key);
     }
+}
+
+std::string CaeserCipher::applyCipher(const std::string& inputText, const bool encrypt){
+    return runCaesarCipher(inputText, key_, encrypt);
 }

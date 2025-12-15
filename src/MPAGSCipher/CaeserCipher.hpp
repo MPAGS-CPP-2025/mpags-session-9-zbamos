@@ -2,6 +2,7 @@
 #define MPAGSCIPHER_CEASERCIPHER_HPP
 
 #include <string>
+#include <vector>
 
 /**
  * \file CeaserCipher.hpp
@@ -30,7 +31,22 @@ public:
      */
     explicit CaeserCipher (const std::string& key);
 
+    /**
+     * \brief apply the caeser cipher to encrypt or decrypt the string
+     * 
+     * \param inputText the string to be encrypted/decrypted
+     * \param encrypt decrypt(false) or encrypt(true) the input text
+     * 
+     * \returns encrypted/decrypted string
+     */
+    std::string applyCipher (const std::string& inputText, const bool encrypt);
+
+private:
     std::size_t key_{0};
+
+    const std::vector<char> alphabet = {
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
 };
 
