@@ -1,11 +1,15 @@
 #ifndef MPAGSCIPHER_CIPHERMODE_HPP
 #define MPAGSCIPHER_CIPHERMODE_HPP
 /**
- * \brief enum to hold the cipher mode encrypt or decrypt
- * 
+ * \file contains the enum CipherMode
+ * \brief The cipher mode encrypt or decrypt
+ */
+/**
+ * \enum CipherMode
+ * \brief defines mode for cipher operation
  */
 enum class CipherMode {
-    Encrypt,
-    Decrypt
+    Encrypt, ///< encrypt the text
+    Decrypt ///< decrypt the textß
 };
 #endif    // MPAGSCIPHER_CIPHERMODE_HPP

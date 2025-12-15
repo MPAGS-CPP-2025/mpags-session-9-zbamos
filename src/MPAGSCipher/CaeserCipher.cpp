@@ -6,6 +6,14 @@
 #include <iostream>
 #include <cctype>
 
+/**
+ * \file CaeserCipher.cpp
+ * \brief Contains the implementation of the CaeserCipher class 
+ */
+/**
+ * \class CaeserCipher
+ * \brief CaeserCipher Implementation
+ */
 CaeserCipher::CaeserCipher(const std::size_t& key) : key_{key}
 {    
 }
@@ -68,6 +76,7 @@ std::string CaeserCipher::applyCipher(const std::string& inputText, const Cipher
                                              alphabetSize_];
                         break;
                 }
+                break;
             }
         }
 

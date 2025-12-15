@@ -12,10 +12,9 @@
  */
 
 /**
+ * \class CaeserCipher
  * \brief CeaserCipher Class
  *
- *
- * \param key ceaser cipher key
  */
 class CaeserCipher {
 public:
@@ -39,7 +38,7 @@ public:
      * \param inputText the string to be encrypted/decrypted
      * \param encrypt decrypt(false) or encrypt(true) the input text
      * 
-     * \returns encrypted/decrypted string
+     * \return encrypted/decrypted string
      */
     std::string applyCipher (const std::string& inputText, const CipherMode encrypt) const;
 

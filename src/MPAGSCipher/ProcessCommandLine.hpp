@@ -27,7 +27,7 @@ struct ProgramSettings {
     /// Key to be used in encrypting/decrypting routine
     std::string cipherKey;
     /// Enum indicating whether the cipher should encrypt or decrypt
-    CipherMode cipherMode{};
+    CipherMode cipherMode{CipherMode::Encrypt};
 
 
 };
